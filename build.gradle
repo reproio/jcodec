@@ -1,0 +1,40 @@
+version = '0.1.10'
+
+task makeJar(type: Exec) {
+  workingDir 'out/production/android'
+  commandLine(
+    'jar',
+    'cf',
+    '../../../../jcodec.jar',
+    'org'
+  )
+}
+
+// sourceSets {
+//   main {
+//     java { srcDir 'android/android' }
+//   }
+// }
+
+
+// jar {
+//   manifest {
+//     attributes(
+//       "Implementation-Title": "JCodec",
+//       "Implementation-Version": version
+//     )
+//   }
+// }
+
+// apply plugin: 'distribution'
+//
+// distributions {
+//   main {
+//     baseName = 'jcodec'
+//     contents {
+//       from {
+//         'out/production'
+//       }
+//     }
+//   }
+// }
